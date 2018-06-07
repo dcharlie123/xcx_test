@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='searchWarpper'>
+    <input class='search' type='text' placeholder="搜索" placeholder-style="text-align:center;font-size:14px"></input>
+  </view>
+  <view class='nav'>
+    <view class='nav-item'>1</view>
+    <view class='nav-item'>2</view>
+    <view class='nav-item'>3</view>
+    <view class='nav-item'>4</view>
+    <view class='nav-item'>5</view>
+  </view>
+  <block catchtap="openDetail" data-list="{{item}}">
+    <view class='movie-list' catchtap="openDetail" data-list="{{item}}">
+      <view class='wrap-img' style="background-image:url({{item.thumbnails}})">
+        <view class='btn'></view>
+      </view>
+      <view class='video-des'>
+        <view class='video_title'>{{item.title}}</view>
+        <view class='sub_title'>{{item.subtitle}}</view>
+        <view class='video_bottom'>
+          <view class='bottom-left'>
+            <text class='video_pub'>{{item.publisher}}</text>
+            <text class='video_time'>{{item.time}}</text>
+          </view>
+          <view class='bottom-right'>
+            <view class='like'>
+              <text>111</text>
+              <text></text>
+            </view>
+            <view class='share'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,25 @@
+<template name="itemTemplate">
+  <block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx">
+    <block catchtap="openDetail" data-list="{{item}}">
+      <view class='movie-list' catchtap="openDetail" data-list="{{item}}">
+        <view class='wrap-img' style="background-image:url({{item.thumbnails[0].url}})">
+          <view class='btn'></view>
+        </view>
+        <view class='video-des'>
+          <text class='video_title'>{{item.title}}</text>
+          <text class='sub_title'>{{item.subtitle}}</text>
+          <view class='video_bottom'>
+            <view class='bottom-left'>
+              <text class='video_pub'></text>
+              <text class='video_time'></text>
+            </view>
+            <view class='bottom-right'>
+              <view class='like'><text>111</text><text></text></view>
+              <view class='share'></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</template>
